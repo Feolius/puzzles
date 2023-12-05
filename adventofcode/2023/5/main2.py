@@ -75,21 +75,9 @@ def segments_transformer(segments, r_map):
     return new_segments
 
 
-
-
-
-
-def segments_intersection(segment1, segment2):
-    if segment1[1] >= segment2[0] and segment2[1] >= segment1[0]:
-        return max(segment1[0], segment2[0]), min(segment1[1], segment2[1])
-    return None
-
-
 segments = seed_segments
 for r_map in maps:
     segments = segments_transformer(segments, r_map)
-
-
 
 
 print(segments[0][0])
